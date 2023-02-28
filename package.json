@@ -1,0 +1,25 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akashwebb/Contacts.git"
+  },
+  "author": "Akash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akashwebb/Contacts/issues"
+  },
+  "homepage": "https://github.com/Akashwebb/Contacts#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
