@@ -27,13 +27,30 @@ app.post("/POST/v1/contacts",async(req,res)=>{
         }
     else{
     try{
-
-        const data= await user.create()
-        res.status(200).json({
-            status:"success",
-            data
-        })
-    }catch(e){
+           const data1=await user.findOne({email})
+            if(data1){
+              return  res.send({
+                    status:"failed",
+                    message:"email already exist, Please Use Another Email"
+                })
+            }
+            
+                const data2= await user.create({
+                    firstName,
+                    lastName,
+                    email,
+                    phone
+                })
+               return res.status(200).json({
+                status:"success",
+                data2
+            })
+            
+           
+    
+           }
+        
+    catch(e){
         res.status(401).json({
             status:"success",
             message:e.message
